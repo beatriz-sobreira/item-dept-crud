@@ -3,64 +3,54 @@
 namespace App\Http\Controllers;
 
 use App\Models\Item;
-use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
 class ItemController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     */
     public function index()
     {
-        //
+        return response()->json(Item::all(), 200);
     }
 
-    /**
-     * Show the form for creating a new resource.
-     */
-    public function create()
-    {
-        //
-    }
-
-    /**
-     * Store a newly created resource in storage.
-     */
     public function store(Request $request)
     {
-        //
+        $request->validate([
+            'name' => 'required|string|max:255',
+            'department_id' => 'required|exists:departments,id',
+        ]);
+
+        $item = Item::create([
+            'name' => $request->name,
+            'department_id' => $request->department_id,
+        ]);
+
+        return response()->json($item, 201);
     }
 
-    /**
-     * Display the specified resource.
-     */
     public function show(Item $item)
     {
-        //
+        return response()->json($item, 200);
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     */
-    public function edit(Item $item)
-    {
-        //
-    }
-
-    /**
-     * Update the specified resource in storage.
-     */
     public function update(Request $request, Item $item)
     {
-        //
+        $request->validate([
+            'name' => 'required|string|max:255',
+            'department_id' => 'required|exists:departments,id',
+        ]);
+
+        $item->update([
+            'name' => $request->name,
+            'department_id' => $request->department_id,
+        ]);
+
+        return response()->json($item, 200);
     }
 
-    /**
-     * Remove the specified resource from storage.
-     */
     public function destroy(Item $item)
     {
-        //
+        $item->delete();
+
+        return response()->json(['message' => 'Item excluído com sucesso.'], 200);
     }
 }
