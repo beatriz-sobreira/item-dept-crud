@@ -10,13 +10,13 @@ class DepartmentController extends Controller
 {
     public function index()
     {
-        return resposnse()->json(Department::all(), 200);
+        return response()->json(Department::all(), 200);
     }
 
     public function store(Request $request)
     {
         $request->validate([
-            'name' => 'required|string|max:225',
+            'name' => 'required|string|max:255',
         ]);
 
         $department = Department::create([
