@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h2>📋 Lista de Departamentos</h2>
+    <h2>Lista de Departamentos</h2>
 
     <div v-if="loading">Carregando...</div>
     <div v-else-if="departments.length === 0">Nenhum departamento encontrado.</div>
@@ -37,7 +37,7 @@ export default {
       this.error = null
 
       try {
-        const response = await api.get('/api/departments') // OBS: /api se o Laravel estiver com prefixo api
+        const response = await api.get('/api/departments')
         this.departments = response.data
       } catch (err) {
         this.error = err.message

@@ -4,7 +4,7 @@ import DepartmentList from './components/DepartmentList.vue'
 
 <template>
   <div class="container">
-    <h1>🌐 Sistema de Departamentos</h1>
+    <h1>Sistema de Departamentos</h1>
     <DepartmentList />
   </div>
 </template>
