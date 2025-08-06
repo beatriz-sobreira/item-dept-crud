@@ -10,3 +10,6 @@ Route::get('/test', function () {
     return 'Rota funcionando!';
 });
 
+Route::get('/api/test', function () {
+    return response()->json(['mensagem' => 'Rota de API funcionando']);
+});
