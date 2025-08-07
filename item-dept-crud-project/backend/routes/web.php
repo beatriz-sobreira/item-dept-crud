@@ -16,6 +16,10 @@ Route::get('/api/test', function () {
     return response()->json(['mensagem' => 'Rota de API funcionando']);
 });
 
+Route::get('/debug', function () {
+    return request()->headers->all();
+});
+
 Route::prefix('api')->group(function () {
     Route::resource('departments', DepartmentController::class);
     Route::resource('items', ItemController::class);
