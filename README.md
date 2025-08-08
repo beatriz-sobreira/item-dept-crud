@@ -16,20 +16,23 @@ Communication between the frontend and backend is handled via the **Axios** libr
 
 ## Project Structure
 
-├── backend/ # Código do Laravel
-│ ├── app/
-│ ├── routes/
-│ ├── public/
-│ └── ...
+```
+├── backend/               # Código do Laravel
+│   ├── app/
+│   ├── routes/
+│   ├── public/
+│   └── ...
 │
-├── frontend/ # Código do Vue 3 + Vite
-└── item-dep-frontend
-│ ├── src/
-│ │ ├── main.js
-│ │ ├── api.js
-│ │ └── ...
-│ ├── public/
-│ └── ...
+├── frontend/              # Código do Vue 3 + Vite
+└── item-dept-frontend
+    ├── src/
+    │   ├── main.js
+    │   ├── api.js
+    │   └── ...
+    ├── public/
+    └── ...
+```
+
 
 ## How to Run the Project
 
