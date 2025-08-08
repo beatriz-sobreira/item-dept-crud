@@ -1,4 +1,4 @@
-# A baisc system for item registration by department
+# A basic system for item registration by department
 
 ## Laravel + Vue 3 + Vite Project
 
