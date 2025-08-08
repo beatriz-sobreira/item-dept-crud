@@ -54,6 +54,6 @@ Communication between the frontend and backend is handled via the **Axios** libr
 
 ## License
 
-This project was developed by **Beatriz Sobreira** as part of a challenge proposed by **Universidade Patativa do Assaré**.  
+This project was developed by **Beatriz Sobreira** as part of a challenge proposed by **Universidade Patativa**.  
 
 All rights reserved.
