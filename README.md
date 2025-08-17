@@ -5,6 +5,13 @@
 This project is a web application using **Laravel** for the backend and **Vue 3** with **Vite** for the frontend.  
 Communication between the frontend and backend is handled via the **Axios** library.
 
+## Environment Setup
+
+For development, **XAMPP** was used to manage the environment with **MySQL** and **PHP**.  
+
+- **XAMPP** provides Apache, MySQL, and PHP in a single package, making it easier to configure the backend database.  
+- The database was created and managed through **phpMyAdmin** included in XAMPP.  
+
 ## Technologies Used
 
 - **Laravel** (Backend)
